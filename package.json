@@ -1,0 +1,39 @@
+{
+  "name": "checkit",
+  "version": "0.0.0",
+  "description": "Checkit",
+  "main": "index.js",
+  "repository": "https://github.com/gberardier/checkit.git",
+  "author": "Guillaume Berardier <guillaume.berardier@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "eslint": "^7.12.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "jest": "^26.6.2",
+    "lerna": "^3.22.1",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.1.0",
+    "prettier-plugin-svelte": "^1.4.1",
+    "sapper": "^0.28.10",
+    "svelte": "^3.29.4",
+    "svelte-loader": "^2.13.6"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {}
+}
